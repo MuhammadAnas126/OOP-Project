@@ -67,10 +67,10 @@ build/
 *~
 
 # Runtime data (if these are generated at runtime, uncomment)
-# favorites.txt
-# item_counts.txt
-# LastReceipt.txt
-# Latest_Receipt.txt
-# reviews.txt
-# sales_data.txt
-# sales.txt
+favorites.txt
+item_counts.txt
+LastReceipt.txt
+Latest_Receipt.txt
+reviews.txt
+sales_data.txt
+sales.txt

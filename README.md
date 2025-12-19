@@ -42,17 +42,20 @@ OOP-Project/
 ## How to Run
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/MuhammadAnas126/OOP-Project.git
    cd OOP-Project
    ```
 
 2. Navigate to the project directory:
+
    ```
    cd restaurantsystem
    ```
 
 3. Build the project:
+
    ```
    mvn clean compile
    ```
@@ -72,6 +75,7 @@ OOP-Project/
 ## Data Files
 
 The application uses text files in the root directory for data persistence:
+
 - `favorites.txt`: User's favorite items
 - `sales_data.txt`: Sales records
 - `reviews.txt`: Customer feedback
