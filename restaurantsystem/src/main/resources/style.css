@@ -1,0 +1,291 @@
+/* 1. Make the ScrollPane background transparent */
+.scroll-pane, .scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* 2. Style the "Track" (The path behind the scrollbar) */
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: transparent; /* Invisible track */
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+/* 3. Style the "Thumb" (The part you drag) */
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #555555; /* Dark Grey */
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em; /* Rounded edges */
+}
+
+/* 4. Hover Effect (Turn Teal when mouse is over it) */
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #00ADB5; /* Your App's Theme Color */
+}
+
+/* 5. Hide the Arrow Buttons (Modern Look) */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+}
+
+/* 6. Make it slimmer */
+.scroll-bar:vertical {
+    -fx-pref-width: 12;
+}
+.scroll-bar:horizontal {
+    -fx-pref-height: 12;
+}
+
+
+/* =========================================
+   CUSTOM ALERT DIALOG STYLING
+   ========================================= */
+
+/* 1. The Main Box Background */
+.my-dark-dialog {
+    -fx-background-color: #2D3447; /* Your Main Dark Blue */
+}
+
+/* 2. The Text Content (Message) */
+.my-dark-dialog .content {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* 3. The Header (Title Area) */
+.my-dark-dialog .header-panel {
+    -fx-background-color: #222831; /* Darker header */
+    -fx-border-color: #E58E26;      /* Orange border under header */
+    -fx-border-width: 0 0 2 0;
+}
+
+/* 4. The Header Text */
+.my-dark-dialog .header-panel .label {
+    -fx-text-fill: #E58E26; /* Orange Title */
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* 5. The "OK" Button */
+.my-dark-dialog .button {
+    -fx-background-color: #00ADB5; /* Teal Button */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+/* 6. Button Hover Effect */
+.my-dark-dialog .button:hover {
+    -fx-background-color: #E58E26; /* Turns Orange on hover */
+}
+
+/* 7. Icon Color (Information 'i' symbol) */
+.my-dark-dialog .graphic-container .region {
+    -fx-background-color: #E58E26; /* Make the 'i' icon orange */
+}
+
+
+
+/* =========================================
+   CHART STYLING FOR DARK THEME
+   ========================================= */
+
+/* --- General Chart Title --- */
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* --- PIE CHART STYLES --- */
+
+/* The labels that appear directly on or next to the pie slices */
+.chart-pie-label {
+    -fx-fill: white; /* Note: It's -fx-fill, not -fx-text-fill for pie labels */
+    -fx-font-size: 11px;
+}
+
+/* The legend items (if you ever turn the legend back on) */
+.chart-legend-item {
+    -fx-text-fill: white;
+}
+
+/* --- BAR CHART STYLES --- */
+
+/* The main title of axes (e.g., "Quantity Sold") */
+.axis-label {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+/* The numbers or categories on the axis lines (e.g., "0.00", "Burger", "Pizza") */
+.axis-tick-label {
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+}
+
+/* The actual lines of the axes and tick marks */
+.axis {
+    -fx-tick-label-fill: white; /* Another way to ensure tick labels are white */
+}
+.axis:top, .axis:bottom {
+    -fx-border-color: transparent transparent white transparent;
+}
+.axis:left, .axis:right {
+    -fx-border-color: transparent white transparent transparent;
+}
+
+/* Optional: Make the grid lines slightly lighter so they are visible but not distracting */
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines {
+    -fx-stroke: #555555; 
+}
+
+/* =========================================
+   MODERN TABLE STYLING
+   ========================================= */
+
+/* The Main Table Container */
+.modern-table {
+    -fx-background-color: transparent; /* Remove default white box */
+    -fx-base: #2D3447;                 /* Dark base color */
+    -fx-control-inner-background: #2D3447; /* Background for rows */
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* The Column Headers (Top Bar) */
+.modern-table .column-header-background {
+    -fx-background-color: #393E46;
+    -fx-background-radius: 10 10 0 0; /* Rounded top corners */
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #00ADB5; /* Teal Line under headers */
+}
+
+.modern-table .column-header, .modern-table .filler {
+    -fx-background-color: transparent;
+    -fx-size: 40px; /* Header Height */
+    -fx-border-color: transparent;
+}
+
+.modern-table .column-header .label {
+    -fx-text-fill: #E58E26; /* Orange Header Text */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* The Rows */
+.modern-table .table-row-cell {
+    -fx-background-color: #2D3447; /* Dark Row Background */
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #393E46; /* Thin grey line between rows */
+    -fx-cell-size: 40px; /* Row Height */
+}
+
+/* Striped Effect (Optional: makes alternate rows slightly lighter) */
+.modern-table .table-row-cell:odd {
+    -fx-background-color: #303744;
+}
+
+/* Selected Row Highlight */
+.modern-table .table-row-cell:selected {
+    -fx-background-color: #393E46;
+    -fx-background-insets: 0;
+    -fx-border-color: #00ADB5; /* Teal border when selected */
+}
+
+/* Text inside the cells */
+.modern-table .table-cell {
+    -fx-text-fill: white; /* ⚡ FIX: Ensures text is always white ⚡ */
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: transparent;
+}
+
+/* Empty Rows (Remove white background) */
+.modern-table .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Scroll Bar Styling to match dark theme */
+.modern-table .increment-button, .modern-table .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.modern-table .scroll-bar:vertical .track,
+.modern-table .scroll-bar:horizontal .track {
+    -fx-background-color: #2D3447;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+.modern-table .scroll-bar:vertical .thumb,
+.modern-table .scroll-bar:horizontal .thumb {
+    -fx-background-color: #555;
+    -fx-background-radius: 5em;
+}
+
+/* The Main Sidebar Container */
+.sidebar {
+    -fx-background-color: #2D3447;
+    -fx-padding: 20 10 20 10; /* Top Right Bottom Left */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Shadow on the right */
+}
+
+/* The "Admin Panel" Header */
+.sidebar-title {
+    -fx-text-fill: #7f8fa6;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 15; /* Add space below it */
+}
+
+/* The Navigation Buttons (Overview, Analytics, etc.) */
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #bdc3c7; /* Light Grey text */
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 15 12 15;
+    -fx-background-radius: 10; /* Rounded Corners */
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 15; /* Space between Icon and Text */
+}
+
+/* Hover Effect - Subtle change when mouse is over */
+.nav-btn:hover {
+    -fx-background-color: #384158; /* Slightly lighter blue */
+    -fx-text-fill: white;
+}
+
+/* THE ACTIVE STATE (Currently Selected Tab) */
+.nav-btn-active {
+    -fx-background-color: rgba(229, 142, 38, 0.15); /* Transparent Orange */
+    -fx-text-fill: #E58E26; /* Your Orange Brand Color */
+    -fx-border-color: #E58E26;
+    -fx-border-width: 0 0 0 4; /* Left border only */
+    -fx-border-radius: 0;      /* Keep left sharp for the border */
+    -fx-font-weight: bold;
+}
+
+/* The Log Out Button - Make it subtle! */
+.logout-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ff5e57;
+    -fx-border-color: #ff5e57;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #ff5e57;
+    -fx-text-fill: white;
+}
