@@ -1,4 +1,4 @@
-# Restaurant Management System
+# Smart Cafeteria System
 
 A JavaFX-based desktop application for managing a restaurant's operations, including menu management, order processing, sales tracking, and user feedback.
 
